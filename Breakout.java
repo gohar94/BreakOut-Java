@@ -90,7 +90,7 @@ public class Breakout extends GraphicsProgram {
 		add(outline);
 		
 		int startx= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
-		int starty= 200;
+		int starty= 50;
 		int startxo= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 		
 		for(int n=0; n<NBRICK_ROWS; n++){
