@@ -59,16 +59,21 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 	
-	//board
-	int i= getWidth();
-	
-	
-	
-
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
-		System.out.println(i);
+		
+		//board
+		int startx= 100;
+		int starty= 100;
+		int i=NBRICKS_PER_ROW;
+		for(i=0; i==NBRICKS_PER_ROW; i++){
+			startx= 100+(BRICK_WIDTH*i)+(BRICK_SEP*i);
+			
+			GRect brick = new GRect(startx, starty, BRICK_WIDTH,BRICK_HEIGHT);
+			add(brick);
+		}
+		
 		/* You fill this in, along with any subsidiary methods */
 	}
 
