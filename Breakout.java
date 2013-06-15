@@ -169,6 +169,7 @@ public class Breakout extends GraphicsProgram {
 		paddle.setFilled(true);
 
 		addMouseListeners();
+		pause(1);
 		
 		/* You fill this in, along with any subsidiary methods */
 	}
