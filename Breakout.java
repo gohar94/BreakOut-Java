@@ -64,9 +64,9 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		
 		//board
-		int startx= (1440)-APPLICATION_WIDTH/2;
+		int startx= (1440-APPLICATION_WIDTH)/2;
 		int starty= 500;
-		int startxo= (1440)-APPLICATION_WIDTH/2;
+		int startxo= (1440-APPLICATION_WIDTH)/2;
 		
 		for(int n=0; n<=NBRICK_ROWS; n++){
 			
