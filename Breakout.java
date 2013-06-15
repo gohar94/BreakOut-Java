@@ -130,7 +130,7 @@ public class Breakout extends GraphicsProgram {
 		// ---
 		
 		boolean done = false;
-		while(!done){
+		for(int i=0; i<100000; i++){
 		addMouseListeners();
 		}
 			
