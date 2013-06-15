@@ -61,8 +61,8 @@ public class Breakout extends GraphicsProgram {
 	
 	
 	
-		int paddlex= 700;
-		GRect paddle = new GRect(paddlex, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+	int paddlex= 700;
+	GRect paddle = new GRect(paddlex, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 		
 	
 	public void mouseMoved(MouseEvent e){
