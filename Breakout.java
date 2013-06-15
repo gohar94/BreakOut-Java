@@ -87,7 +87,6 @@ public class Breakout extends GraphicsProgram {
 		// ---
 		
 		int startx= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
-		System.out.println("Starting x of window: "+startx);
 		int starty= 200;
 		int startxo= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 		
