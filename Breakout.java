@@ -73,12 +73,41 @@ public class Breakout extends GraphicsProgram {
 			for(int i=0; i<NBRICKS_PER_ROW; i++){
 				startx= startx+(BRICK_WIDTH)+(BRICK_SEP);
 				GRect brick = new GRect(startx,starty,BRICK_WIDTH,BRICK_HEIGHT);
-				if(i==0 || i==1){
+				
+				if(n==0 || n==1){
 				brick.setFillColor(Color.RED);
 				brick.setColor(Color.RED);
 				brick.setFilled(true);
 				add(brick);
 				}
+				
+				if(n==2 || n==3){
+					brick.setFillColor(Color.ORANGE);
+					brick.setColor(Color.ORANGE);
+					brick.setFilled(true);
+					add(brick);
+					}
+				
+				if(n==4 || n==5){
+					brick.setFillColor(Color.YELLOW);
+					brick.setColor(Color.YELLOW);
+					brick.setFilled(true);
+					add(brick);
+					}
+				
+				if(n==6 || n==7){
+					brick.setFillColor(Color.GREEN);
+					brick.setColor(Color.GREEN);
+					brick.setFilled(true);
+					add(brick);
+					}
+				
+				if(n==8 || n==9){
+					brick.setFillColor(Color.CYAN);
+					brick.setColor(Color.CYAN);
+					brick.setFilled(true);
+					add(brick);
+					}
 			}
 			
 			startx=startxo;
