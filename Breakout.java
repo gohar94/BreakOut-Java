@@ -69,10 +69,7 @@ public class Breakout extends GraphicsProgram {
 		add(paddle);
 	}	
 	
-/* Method: run() */
-/** Runs the Breakout program. */
-	public void run() {
-		
+	public void board(){
 		//board
 		// ---
 		
@@ -126,6 +123,13 @@ public class Breakout extends GraphicsProgram {
 			starty=starty+BRICK_HEIGHT+BRICK_SEP;
 			
 		}
+	}
+	
+/* Method: run() */
+/** Runs the Breakout program. */
+	public void run() {
+		
+		board();
 		
 		//paddle
 		// ---
