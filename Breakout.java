@@ -148,6 +148,7 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		
 		board();
+		ball();
 		
 		add(paddle);
 		paddle.setFillColor(Color.BLACK);
