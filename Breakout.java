@@ -129,8 +129,10 @@ public class Breakout extends GraphicsProgram {
 		//paddle
 		// ---
 		
+		boolean done = false;
+		while(!done){
 		addMouseListeners();
-		
+		}
 			
 		
 		/* You fill this in, along with any subsidiary methods */
