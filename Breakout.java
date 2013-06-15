@@ -150,6 +150,12 @@ public class Breakout extends GraphicsProgram {
 		ball.setFillColor(Color.BLACK);
 		ball.setFilled(true);
 		
+		vx = rgen.nextDouble(1.0, 3.0);
+		if (rgen.nextBoolean(0.5)) vx = -vx;
+		System.out.println(vx);
+		ball.move(vx, vy);
+		pause(1);
+		
 	}
 	
 /* Method: run() */
@@ -169,13 +175,7 @@ public class Breakout extends GraphicsProgram {
 		addMouseListeners();
 		ball();
 		
-//		vx = rgen.nextDouble(1.0, 3.0);
-//		if (rgen.nextBoolean(0.5)) vx = -vx;
-		System.out.println(vx);
-		while(!done){
-		ball.move(vx, vy);
-		pause(1);
-		}
+		
 		/* You fill this in, along with any subsidiary methods */
 	}
 
