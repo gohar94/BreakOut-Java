@@ -59,11 +59,16 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 	
-	int paddlex= 700;
-	GRect paddle = new GRect(paddlex, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
-	
+//	
+//	public void paddle(){
+//		int paddlex= 700;
+//		GRect paddle = new GRect(paddlex, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+//		add(paddle);
+//	}
 	
 	public void mouseMoved(MouseEvent e){
+		int paddlex= 700;
+		GRect paddle = new GRect(paddlex, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setBounds(e.getX(), PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 		System.out.println(getX());
 		add(paddle);
