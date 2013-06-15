@@ -59,12 +59,12 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 	
-	int screenres=1440;
+	int screenres_x=1440;
 	
 	int paddlex= 700;
 	GRect paddle = new GRect(paddlex, APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 	
-	int lowerbound= (screenres - APPLICATION_WIDTH)/2;
+	int lowerbound= (screenres_x - APPLICATION_WIDTH)/2;
 	int upperbound= lowerbound + APPLICATION_WIDTH - PADDLE_WIDTH;
 	
 	public void mouseMoved(MouseEvent e){
@@ -86,10 +86,10 @@ public class Breakout extends GraphicsProgram {
 		//board
 		// ---
 		
-		int startx= ((screenres-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
+		int startx= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 		System.out.println("Starting x of window: "+startx);
 		int starty= 200;
-		int startxo= ((screenres-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
+		int startxo= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 		
 		for(int n=0; n<NBRICK_ROWS; n++){
 			
