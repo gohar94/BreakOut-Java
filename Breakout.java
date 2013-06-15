@@ -134,11 +134,11 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		
 		board();
+		
 		add(paddle);
 		paddle.setFillColor(Color.BLACK);
 		paddle.setFilled(true);
-		//paddle
-		// ---
+
 		addMouseListeners();
 		
 		/* You fill this in, along with any subsidiary methods */
