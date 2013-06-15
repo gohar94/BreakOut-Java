@@ -173,10 +173,7 @@ public class Breakout extends GraphicsProgram {
 		
 		boolean done=false;
 		
-		while(!done){
 		ball();
-		}
-//		pause(1);
 		
 		/* You fill this in, along with any subsidiary methods */
 	}
