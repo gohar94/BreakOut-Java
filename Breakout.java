@@ -59,11 +59,21 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 	
+	int paddlex= 700;
+	GRect paddle = new GRect(paddlex, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+	
+	public void mouseMoved(MouseEvent e){
+		paddle.setBounds(getX(), PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+		add(paddle);
+	}	
+	
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
 		
 		//board
+		// ---
+		
 		int startx= ((1440-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 		int starty= 200;
 		int startxo= ((1440-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
@@ -115,6 +125,12 @@ public class Breakout extends GraphicsProgram {
 			
 		}
 		
+		//paddle
+		// ---
+		
+		addMouseListeners();
+		
+			
 		
 		/* You fill this in, along with any subsidiary methods */
 	}
