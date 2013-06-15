@@ -65,6 +65,7 @@ public class Breakout extends GraphicsProgram {
 		
 		//board
 		int startx= 500;
+		System.out.println(startx);
 		int starty= 500;
 		int i=0;
 		for(i=0; i==NBRICKS_PER_ROW; i++){
