@@ -149,13 +149,15 @@ public class Breakout extends GraphicsProgram {
 		add(ball);
 		ball.setFillColor(Color.BLACK);
 		ball.setFilled(true);
+		boolean done=false;
 		
+		while(!done){
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		System.out.println(vx);
 		ball.move(vx, vy);
 		pause(1);
-		
+		}
 	}
 	
 /* Method: run() */
