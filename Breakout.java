@@ -58,6 +58,12 @@ public class Breakout extends GraphicsProgram {
 
 /** Number of turns */
 	private static final int NTURNS = 3;
+	
+	//board
+	int i= getWidth();
+	System.out.println(i);
+	
+	
 
 /* Method: run() */
 /** Runs the Breakout program. */
