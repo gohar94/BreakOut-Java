@@ -71,7 +71,7 @@ public class Breakout extends GraphicsProgram {
 			add(paddle);
 		}
 		if(e.getX()>880){
-			paddle.setBounds(820, APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+			paddle.setBounds(880, APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 			add(paddle);
 		}
 		if(e.getX()<480){
