@@ -61,13 +61,14 @@ public class Breakout extends GraphicsProgram {
 	
 	//board
 	int i= getWidth();
-	System.out.println(i);
+	
 	
 	
 
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
+		System.out.println(i);
 		/* You fill this in, along with any subsidiary methods */
 	}
 
