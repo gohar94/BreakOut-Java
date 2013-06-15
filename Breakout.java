@@ -64,17 +64,19 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		
 		//board
-		int startxo= 500;
+		int startx= 500;
 		int starty= 500;
-		int startx= 0;
+		int startxo= 500;
 		
 		for(int n=0; n<=NBRICK_ROWS; n++){
 			
 			for(int i=0; i<=NBRICKS_PER_ROW; i++){
-				startx= startxo+(BRICK_WIDTH)+(BRICK_SEP);
+				startx= startx+(BRICK_WIDTH)+(BRICK_SEP);
 				GRect brick = new GRect(startx,starty,BRICK_WIDTH,BRICK_HEIGHT);
 				add(brick);
 			}
+			
+			startx=startxo;
 			starty=starty+BRICK_HEIGHT+BRICK_SEP;
 			
 		}
