@@ -69,7 +69,7 @@ public class Breakout extends GraphicsProgram {
 		int i=NBRICKS_PER_ROW;
 		for(i=0; i==NBRICKS_PER_ROW; i++){
 			startx= startx+(BRICK_WIDTH*i)+(BRICK_SEP*i);
-			
+			System.out.println(startx);
 			GRect brick = new GRect(startx,starty,BRICK_WIDTH,BRICK_HEIGHT);
 			add(brick);
 		}
