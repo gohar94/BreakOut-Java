@@ -59,6 +59,10 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 	
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+	private double vx=3;
+	private double vy=3;
+	
 	int screenres_x=1440;
 	
 	int paddlex= 700;
@@ -139,10 +143,16 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void ball(){
+		
+		
 		GOval ball = new GOval(720, 400, BALL_RADIUS, BALL_RADIUS);
 		add(ball);
 		ball.setFillColor(Color.BLACK);
 		ball.setFilled(true);
+		vx = rgen.nextDouble(1.0, 3.0);
+		if (rgen.nextBoolean(0.5)) vx = -vx;
+		
+		ball.move(vx, vy);
 	}
 	
 /* Method: run() */
