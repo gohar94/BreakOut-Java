@@ -66,12 +66,12 @@ public class Breakout extends GraphicsProgram {
 		
 	
 	public void mouseMoved(MouseEvent e){
-		if(e.getX()<880 && e.getX()>520){
+		if(e.getX()<860 && e.getX()>520){
 			paddle.setBounds(e.getX(), APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 			add(paddle);
 		}
-		if(e.getX()>880){
-			paddle.setBounds(880, APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+		if(e.getX()>860){
+			paddle.setBounds(860, APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 			add(paddle);
 		}
 		if(e.getX()<520){
