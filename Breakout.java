@@ -86,9 +86,6 @@ public class Breakout extends GraphicsProgram {
 		//board
 		// ---
 		
-		GRect outline = new GRect((screenres_x - APPLICATION_WIDTH - BRICK_SEP)/2, 50-BRICK_SEP, 400, 600);
-		add(outline);
-		
 		int startx= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 		int starty= 50;
 		int startxo= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
