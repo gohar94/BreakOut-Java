@@ -145,15 +145,16 @@ public class Breakout extends GraphicsProgram {
 	public void ball(){
 		
 		
-//		GOval ball = new GOval(720, 400, BALL_RADIUS, BALL_RADIUS);
-//		add(ball);
-//		ball.setFillColor(Color.BLACK);
-//		ball.setFilled(true);
-//		
-//		vx = rgen.nextDouble(1.0, 3.0);
-//		if (rgen.nextBoolean(0.5)) vx = -vx;
-//		ball.move(vx, vy);
-//		pause(10);
+		GOval ball = new GOval(720, 400, BALL_RADIUS, BALL_RADIUS);
+		add(ball);
+		ball.setFillColor(Color.BLACK);
+		ball.setFilled(true);
+		
+		vx = rgen.nextDouble(1.0, 3.0);
+		if (rgen.nextBoolean(0.5)) vx = -vx;
+		System.out.println(vx);
+		ball.move(vx, vy);
+		pause(1);
 		
 	}
 	
@@ -162,17 +163,7 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		
 		board();
-//		ball();
-		
-		GOval ball = new GOval(720, 400, BALL_RADIUS, BALL_RADIUS);
-		add(ball);
-		ball.setFillColor(Color.BLACK);
-		ball.setFilled(true);
-		
-		vx = rgen.nextDouble(1.0, 3.0);
-		if (rgen.nextBoolean(0.5)) vx = -vx;
-		ball.move(vx, vy);
-		pause(1);
+		ball();
 		
 		add(paddle);
 		paddle.setFillColor(Color.BLACK);
