@@ -328,6 +328,8 @@ public class Breakout extends GraphicsProgram {
 			ball.setBounds(ballx, bally, 2*BALL_RADIUS, 2*BALL_RADIUS);
 			pause(8);
 			
+			print(turns);
+			
 		}
 		
 		/* You fill this in, along with any subsidiary methods */
