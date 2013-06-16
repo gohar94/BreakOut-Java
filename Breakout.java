@@ -66,7 +66,7 @@ public class Breakout extends GraphicsProgram {
 	int screenres_x=1440;
 	int screenres_y=750;
 	
-	int paddlex= 700;
+	int paddlex= (((screenres_y-APPLICATION_HEIGHT)/2)+APPLICATION_HEIGHT-PADDLE_HEIGHT);
 	GRect paddle = new GRect(paddlex, 700, PADDLE_WIDTH, PADDLE_HEIGHT);
 	
 	int lowerbound= (screenres_x - APPLICATION_WIDTH)/2;
