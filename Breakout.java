@@ -213,23 +213,45 @@ public class Breakout extends GraphicsProgram {
 		
 		while(!done){
 			
-			if(getElementAt(ballx, bally)!=null){
+			if(getElementAt(ballx, bally)!=null && getElementAt(ballx, bally)!=paddle){
 				remove(getElementAt(ballx, bally));	
 				vy=-vy;
 			}
 			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null){
+			if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null && getElementAt(ballx+(2*BALL_RADIUS), bally)!=paddle){
 				remove(getElementAt(ballx+(2*BALL_RADIUS), bally));
 				vy=-vy;
 			}
 			
-			if(getElementAt(ballx, bally+(2*BALL_RADIUS))!=null){
+			if(getElementAt(ballx, bally+(2*BALL_RADIUS))!=null && getElementAt(ballx, bally+(2*BALL_RADIUS))!=paddle){
 				remove(getElementAt(ballx, bally+(2*BALL_RADIUS)));
 				vy=-vy;
 			}
 			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=null){
+			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=null && getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=paddle){
 				remove(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS)));
+				vy=-vy;
+			}
+			
+			//--
+			
+			if(getElementAt(ballx, bally)!=null && getElementAt(ballx, bally)==paddle){
+			
+				vy=-vy;
+			}
+			
+			if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null && getElementAt(ballx+(2*BALL_RADIUS), bally)==paddle){
+			
+				vy=-vy;
+			}
+			
+			if(getElementAt(ballx, bally+(2*BALL_RADIUS))!=null && getElementAt(ballx, bally+(2*BALL_RADIUS))==paddle){
+			
+				vy=-vy;
+			}
+			
+			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=null && getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))==paddle){
+				
 				vy=-vy;
 			}
 			
