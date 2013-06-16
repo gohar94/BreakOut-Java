@@ -154,6 +154,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void ball(){
+
 		
 //		
 //		GOval ball = new GOval(ballx, bally, BALL_RADIUS, BALL_RADIUS);
@@ -196,13 +197,17 @@ public class Breakout extends GraphicsProgram {
 		
 		while(!done){
 			
-//			GObject collider = getCollidingObject();
-			
-			if(getElementAt(ballx, bally)!=null && getElementAt(ballx, bally)!=paddle){
-				vy=-vy;
-				remove(getElementAt(ballx, bally));	
-				
+			if(getElementAt(ballx, bally)!=null){
+				GObject collision = getElementAt(ballx, bally);
+				if(collision==paddle){
+					vy=-vy;
+				}
+				else{
+					remove(collision);
+					vy=-vy;
+				}
 			}
+			
 			
 			if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null && getElementAt(ballx+(2*BALL_RADIUS), bally)!=paddle){
 				vy=-vy;
@@ -221,19 +226,7 @@ public class Breakout extends GraphicsProgram {
 				remove(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS)));
 				
 			}
-			
-			//--
-			
-			if(ballx>=mousex && ballx<=(mousex+PADDLE_WIDTH) && bally+(2*BALL_RADIUS)==paddley){
-				vy=-vy;
-			}
-			
-			if(ballx+(2*BALL_RADIUS)>=mousex && ballx+(2*BALL_RADIUS)<=(mousex+PADDLE_WIDTH) && bally+(2*BALL_RADIUS)==paddley){
-				vy=-vy;
-			}
-			
-			
-			
+		
 			//hitting the walls on right and left
 			
 			if(ballx+(2*BALL_RADIUS)>=(((screenres_x-APPLICATION_WIDTH)/2)+APPLICATION_WIDTH) || ballx<=((screenres_x-APPLICATION_WIDTH)/2)){
