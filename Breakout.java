@@ -269,7 +269,7 @@ public class Breakout extends GraphicsProgram {
 				ballx=720;
 				}
 				else{
-					break;
+					done=true;
 				}
 			}
 			
