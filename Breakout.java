@@ -60,8 +60,8 @@ public class Breakout extends GraphicsProgram {
 	private static final int NTURNS = 3;
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private double vx=.3;
-	private double vy=.3;
+	private double vx=3;
+	private double vy=3;
 	
 	int screenres_x=1440;
 	
@@ -186,7 +186,11 @@ public class Breakout extends GraphicsProgram {
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		
 		while(!done){
-
+			
+			if(ballx+BALL_RADIUS>(((screenres_x-APPLICATION_WIDTH)/2)+APPLICATION_WIDTH) || ballx<((screenres_x-APPLICATION_WIDTH)/2)){
+				vx=-vx;
+			}
+			
 			ballx+=vx;
 			bally+=vy;
 			ball.setBounds(ballx, bally, BALL_RADIUS,BALL_RADIUS);
