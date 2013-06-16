@@ -197,6 +197,7 @@ public class Breakout extends GraphicsProgram {
 		
 		board();
 		GRect boundarywall = new GRect(startx, starty, APPLICATION_WIDTH, APPLICATION_HEIGHT);
+		boundarywall.setColor(Color.BLACK);
 		add(boundarywall);
 		
 		
