@@ -83,6 +83,7 @@ public class Breakout extends GraphicsProgram {
 	
 	int startx= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 	int starty= (screenres_y-APPLICATION_HEIGHT)/2+BRICK_Y_OFFSET;
+	int startywall = starty-BRICK_Y_OFFSET;
 	int startxo= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 	int mousex=0;
 	int bricks_remaining = NBRICKS_PER_ROW*NBRICK_ROWS;
@@ -108,13 +109,13 @@ public class Breakout extends GraphicsProgram {
 	
 	public void board(){
 		
-		GLine nn1 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,starty-3,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,starty-3);
+		GLine nn1 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-3,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,startywall-3);
 		add(nn1);
-		GLine nn2 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,starty-3,startx+(BRICK_WIDTH)+(BRICK_SEP)-3,starty-1+APPLICATION_HEIGHT);
+		GLine nn2 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-3,startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-1+APPLICATION_HEIGHT);
 		add(nn2);
-		GLine nn3 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,starty-2,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,starty-3+APPLICATION_HEIGHT);
+		GLine nn3 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,starty-2,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,startywall-3+APPLICATION_HEIGHT);
 		add(nn3);
-		GLine nn4 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,starty-1+APPLICATION_HEIGHT,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,starty-1+APPLICATION_HEIGHT);
+		GLine nn4 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-1+APPLICATION_HEIGHT,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,startywall-1+APPLICATION_HEIGHT);
 		add(nn4);
 		
 		
@@ -167,22 +168,6 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
-	public void ball(){
-
-		
-//		
-//		GOval ball = new GOval(ballx, bally, BALL_RADIUS, BALL_RADIUS);
-//		add(ball);
-//		ball.setFillColor(Color.BLACK);
-//		ball.setFilled(true);
-//		
-//		vx = rgen.nextDouble(1.0, 3.0);
-//		if (rgen.nextBoolean(0.5)) vx = -vx;
-//		System.out.println(vx);
-//		ball.move(vx, vy);
-//		pause(1);
-//		
-	}
 
 	public void collision(){
 		if(getElementAt(ballx, bally)!=null){
