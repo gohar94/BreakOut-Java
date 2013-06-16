@@ -64,6 +64,7 @@ public class Breakout extends GraphicsProgram {
 	private double vy=3;
 	
 	int screenres_x=1440;
+	int screenres_y=750;
 	
 	int paddlex= 700;
 	GRect paddle = new GRect(paddlex, 700, PADDLE_WIDTH, PADDLE_HEIGHT);
@@ -189,6 +190,10 @@ public class Breakout extends GraphicsProgram {
 			
 			if(ballx+BALL_RADIUS>(((screenres_x-APPLICATION_WIDTH)/2)+APPLICATION_WIDTH) || ballx<((screenres_x-APPLICATION_WIDTH)/2)){
 				vx=-vx;
+			}
+			
+			if(bally>700 || bally<100){
+				vy=-vy;
 			}
 			
 			ballx+=vx;
