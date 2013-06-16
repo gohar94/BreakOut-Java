@@ -171,6 +171,67 @@ public class Breakout extends GraphicsProgram {
 //		
 	}
 
+	public void collision(){
+		if(getElementAt(ballx, bally)!=null){
+			GObject collision = getElementAt(ballx, bally);
+			if(collision==paddle){
+				vy=-vy;
+			}
+			else{
+				remove(collision);
+				bricks_remaining=bricks_remaining-1;
+				vy=-vy;
+			}
+		}
+		
+		if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null){
+			GObject collision = getElementAt(ballx+(2*BALL_RADIUS), bally);
+			if(collision==paddle){
+				vy=-vy;
+			}
+			else{
+				remove(collision);
+				bricks_remaining=bricks_remaining-1;
+				vy=-vy;
+			}
+		}
+		
+		if(getElementAt(ballx, bally+(2*BALL_RADIUS))!=null){
+			GObject collision = getElementAt(ballx, bally+(2*BALL_RADIUS));
+			if(collision==paddle){
+				vy=-vy;
+			}
+			else{
+				remove(collision);
+				bricks_remaining=bricks_remaining-1;
+				vy=-vy;
+			}
+		}
+		
+		if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=null){
+			GObject collision = getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS));
+			if(collision==paddle){
+				vy=-vy;
+			}
+			else{
+				remove(collision);
+				bricks_remaining=bricks_remaining-1;
+				vy=-vy;
+			}
+		}
+		
+		if(getElementAt(ballx+BALL_RADIUS+1, bally+(2*BALL_RADIUS)+1)!=null){
+			GObject collision = getElementAt(ballx+BALL_RADIUS+1, bally+(2*BALL_RADIUS)+1);
+			if(collision==paddle){
+				vy=-vy;
+			}
+			else{
+				remove(collision);
+				bricks_remaining=bricks_remaining-1;
+				vy=-vy;
+			}
+		}
+	}
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
@@ -198,65 +259,7 @@ public class Breakout extends GraphicsProgram {
 		
 		while(!done){
 			
-			if(getElementAt(ballx, bally)!=null){
-				GObject collision = getElementAt(ballx, bally);
-				if(collision==paddle){
-					vy=-vy;
-				}
-				else{
-					remove(collision);
-					bricks_remaining=bricks_remaining-1;
-					vy=-vy;
-				}
-			}
-			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null){
-				GObject collision = getElementAt(ballx+(2*BALL_RADIUS), bally);
-				if(collision==paddle){
-					vy=-vy;
-				}
-				else{
-					remove(collision);
-					bricks_remaining=bricks_remaining-1;
-					vy=-vy;
-				}
-			}
-			
-			if(getElementAt(ballx, bally+(2*BALL_RADIUS))!=null){
-				GObject collision = getElementAt(ballx, bally+(2*BALL_RADIUS));
-				if(collision==paddle){
-					vy=-vy;
-				}
-				else{
-					remove(collision);
-					bricks_remaining=bricks_remaining-1;
-					vy=-vy;
-				}
-			}
-			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=null){
-				GObject collision = getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS));
-				if(collision==paddle){
-					vy=-vy;
-				}
-				else{
-					remove(collision);
-					bricks_remaining=bricks_remaining-1;
-					vy=-vy;
-				}
-			}
-			
-			if(getElementAt(ballx+BALL_RADIUS+1, bally+(2*BALL_RADIUS)+1)!=null){
-				GObject collision = getElementAt(ballx+BALL_RADIUS+1, bally+(2*BALL_RADIUS)+1);
-				if(collision==paddle){
-					vy=-vy;
-				}
-				else{
-					remove(collision);
-					bricks_remaining=bricks_remaining-1;
-					vy=-vy;
-				}
-			}
+			collision();
 		
 			//hitting the walls on right and left
 			
