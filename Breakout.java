@@ -231,6 +231,18 @@ public class Breakout extends GraphicsProgram {
 				vy=-vy;
 			}
 		}
+		
+		if(getElementAt(ballx+BALL_RADIUS+1, bally+1)!=null){
+			GObject collision = getElementAt(ballx+BALL_RADIUS+1, bally+1);
+			if(collision==paddle){
+				vy=-vy;
+			}
+			else{
+				remove(collision);
+				bricks_remaining=bricks_remaining-1;
+				vy=-vy;
+			}
+		}
 	}
 /* Method: run() */
 /** Runs the Breakout program. */
