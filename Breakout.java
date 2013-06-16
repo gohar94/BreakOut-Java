@@ -147,6 +147,8 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
+	
+	
 	public void ball(){
 		
 //		
@@ -188,6 +190,8 @@ public class Breakout extends GraphicsProgram {
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		
 		while(!done){
+			
+			System.out.println(getElementAt(ballx, bally));
 			
 			if(ballx+BALL_RADIUS>(((screenres_x-APPLICATION_WIDTH)/2)+APPLICATION_WIDTH) || ballx<((screenres_x-APPLICATION_WIDTH)/2)){
 				vx=-vx;
