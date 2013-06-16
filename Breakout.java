@@ -99,6 +99,9 @@ public class Breakout extends GraphicsProgram {
 		int starty= (screenres_y-APPLICATION_HEIGHT)/2+BRICK_Y_OFFSET;
 		int startxo= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 		
+		GRect boundarywall = new GRect(startx, starty, APPLICATION_WIDTH, APPLICATION_HEIGHT);
+		add(boundarywall);
+		
 		for(int n=0; n<NBRICK_ROWS; n++){
 			
 			for(int i=0; i<NBRICKS_PER_ROW; i++){
