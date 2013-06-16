@@ -180,6 +180,7 @@ public class Breakout extends GraphicsProgram {
 		ball.setFillColor(Color.BLACK);
 		ball.setFilled(true);
 		
+		addMouseListeners();
 		
 		
 		
@@ -196,8 +197,6 @@ public class Breakout extends GraphicsProgram {
 		
 		
 		
-		addMouseListeners();
-		ball();
 		
 		
 		/* You fill this in, along with any subsidiary methods */
