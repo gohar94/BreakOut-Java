@@ -271,7 +271,7 @@ public class Breakout extends GraphicsProgram {
 			ballx+=vx;
 			bally+=vy;
 			ball.setBounds(ballx, bally, BALL_RADIUS,BALL_RADIUS);
-			pause(1);
+			pause(10);
 			
 		}
 		
