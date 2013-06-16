@@ -61,7 +61,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private double vx=1;
-	private double vy=0.5;
+	private double vy=1;
 	
 	int screenres_x=1440;
 	int screenres_y=750;
@@ -208,7 +208,7 @@ public class Breakout extends GraphicsProgram {
 		
 		addMouseListeners();
 		
-		vx = rgen.nextDouble(1.0, 3.0);
+		vx = rgen.nextDouble(1.0, 2.0);
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		
 		while(!done){
