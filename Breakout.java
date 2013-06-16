@@ -192,7 +192,7 @@ public class Breakout extends GraphicsProgram {
 				vx=-vx;
 			}
 			
-			if(bally>700 || bally<100){
+			if(bally+BALL_RADIUS>700 || bally<100){
 				vy=-vy;
 			}
 			
