@@ -224,11 +224,11 @@ public class Breakout extends GraphicsProgram {
 			
 			//--
 			
-			if(ballx>mousex && ballx<(mousex+PADDLE_WIDTH) && bally+(2*BALL_RADIUS)==paddley){
+			if(ballx>=mousex && ballx<=(mousex+PADDLE_WIDTH) && bally+(2*BALL_RADIUS)==paddley){
 				vy=-vy;
 			}
 			
-			if(ballx+(2*BALL_RADIUS)>mousex && ballx+(2*BALL_RADIUS)<(mousex+PADDLE_WIDTH) && bally+(2*BALL_RADIUS)==paddley){
+			if(ballx+(2*BALL_RADIUS)>=mousex && ballx+(2*BALL_RADIUS)<=(mousex+PADDLE_WIDTH) && bally+(2*BALL_RADIUS)==paddley){
 				vy=-vy;
 			}
 			
