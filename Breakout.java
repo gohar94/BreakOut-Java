@@ -71,6 +71,9 @@ public class Breakout extends GraphicsProgram {
 	int lowerbound= (screenres_x - APPLICATION_WIDTH)/2;
 	int upperbound= lowerbound + APPLICATION_WIDTH - PADDLE_WIDTH;
 	
+	int ballx=720;
+	int bally= 400;
+	
 	public void mouseMoved(MouseEvent e){
 		if(e.getX()<860 && e.getX()>520){
 			paddle.setBounds(e.getX(), APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
@@ -144,18 +147,18 @@ public class Breakout extends GraphicsProgram {
 	
 	public void ball(){
 		
-		
-		GOval ball = new GOval(720, 400, BALL_RADIUS, BALL_RADIUS);
-		add(ball);
-		ball.setFillColor(Color.BLACK);
-		ball.setFilled(true);
-		
-		vx = rgen.nextDouble(1.0, 3.0);
-		if (rgen.nextBoolean(0.5)) vx = -vx;
-		System.out.println(vx);
-		ball.move(vx, vy);
-		pause(1);
-		
+//		
+//		GOval ball = new GOval(ballx, bally, BALL_RADIUS, BALL_RADIUS);
+//		add(ball);
+//		ball.setFillColor(Color.BLACK);
+//		ball.setFilled(true);
+//		
+//		vx = rgen.nextDouble(1.0, 3.0);
+//		if (rgen.nextBoolean(0.5)) vx = -vx;
+//		System.out.println(vx);
+//		ball.move(vx, vy);
+//		pause(1);
+//		
 	}
 	
 /* Method: run() */
@@ -170,7 +173,28 @@ public class Breakout extends GraphicsProgram {
 		paddle.setFilled(true);
 		
 		boolean done=false;
+		
 
+		GOval ball = new GOval(ballx, bally, BALL_RADIUS, BALL_RADIUS);
+		add(ball);
+		ball.setFillColor(Color.BLACK);
+		ball.setFilled(true);
+		
+		
+		
+		
+		while(!done){
+
+			vx = rgen.nextDouble(1.0, 3.0);
+			if (rgen.nextBoolean(0.5)) vx = -vx;
+			ballx+=vx;
+			bally+=vy;
+			ball.setBounds(ballx, bally, BALL_RADIUS,BALL_RADIUS);
+			pause(1);
+		}
+		
+		
+		
 		
 		addMouseListeners();
 		ball();
