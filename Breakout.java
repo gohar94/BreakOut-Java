@@ -96,7 +96,7 @@ public class Breakout extends GraphicsProgram {
 		// ---
 		
 		int startx= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
-		int starty= (screenres_y-APPLICATION_HEIGHT)/2-BRICK_Y_OFFSET;
+		int starty= (screenres_y-APPLICATION_HEIGHT)/2+BRICK_Y_OFFSET;
 		int startxo= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 		
 		for(int n=0; n<NBRICK_ROWS; n++){
