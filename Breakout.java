@@ -204,6 +204,7 @@ public class Breakout extends GraphicsProgram {
 				}
 				else{
 					remove(collision);
+					bricks_remaining=bricks_remaining-1;
 					vy=-vy;
 				}
 			}
@@ -215,6 +216,7 @@ public class Breakout extends GraphicsProgram {
 				}
 				else{
 					remove(collision);
+					bricks_remaining=bricks_remaining-1;
 					vy=-vy;
 				}
 			}
@@ -226,6 +228,7 @@ public class Breakout extends GraphicsProgram {
 				}
 				else{
 					remove(collision);
+					bricks_remaining=bricks_remaining-1;
 					vy=-vy;
 				}
 			}
@@ -237,6 +240,7 @@ public class Breakout extends GraphicsProgram {
 				}
 				else{
 					remove(collision);
+					bricks_remaining=bricks_remaining-1;
 					vy=-vy;
 				}
 			}
@@ -248,6 +252,7 @@ public class Breakout extends GraphicsProgram {
 				}
 				else{
 					remove(collision);
+					bricks_remaining=bricks_remaining-1;
 					vy=-vy;
 				}
 			}
@@ -273,6 +278,9 @@ public class Breakout extends GraphicsProgram {
 				}
 			}
 			
+			if(bricks_remaining<=0){
+				done=true;
+			}
 			ballx+=vx;
 			bally+=vy;
 			ball.setBounds(ballx, bally, 2*BALL_RADIUS, 2*BALL_RADIUS);
