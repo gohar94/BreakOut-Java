@@ -270,11 +270,11 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
-	print(turns);
+	
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
-		
+		print(turns);
 		board();
 		
 		add(paddle);
