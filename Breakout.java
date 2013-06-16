@@ -51,7 +51,7 @@ public class Breakout extends GraphicsProgram {
 	private static final int BRICK_HEIGHT = 8;
 
 /** Radius of the ball in pixels */
-	private static final int BALL_RADIUS = 5;
+	private static final int BALL_RADIUS = 10;
 
 /** Offset of the top brick row from the top */
 	private static final int BRICK_Y_OFFSET = 70;
@@ -193,6 +193,9 @@ public class Breakout extends GraphicsProgram {
 //		}
 //	}
 	
+//	private GObject getCollidingObject(){
+//		getElementAt(ballx, bally);
+//	}
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
@@ -219,6 +222,8 @@ public class Breakout extends GraphicsProgram {
 		if (rgen.nextBoolean(0.5)) vx = -vx;
 		
 		while(!done){
+			
+			GObject collider = getCollidingObject();
 			
 			if(getElementAt(ballx, bally)!=null && getElementAt(ballx, bally)!=paddle){
 				vy=-vy;
