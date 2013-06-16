@@ -242,22 +242,22 @@ public class Breakout extends GraphicsProgram {
 			
 			//--
 			
-			if(getElementAt(ballx, bally)!=null && getElementAt(ballx, bally)==paddle){
+			if(getElementAt(ballx, bally)==paddle){
 			
 				vy=-vy;
 			}
 			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null && getElementAt(ballx+(2*BALL_RADIUS), bally)==paddle){
+			if(getElementAt(ballx+(2*BALL_RADIUS), bally)==paddle){
 			
 				vy=-vy;
 			}
 			
-			if(getElementAt(ballx, bally+(2*BALL_RADIUS))!=null && getElementAt(ballx, bally+(2*BALL_RADIUS))==paddle){
+			if(getElementAt(ballx, bally+(2*BALL_RADIUS))==paddle){
 			
 				vy=-vy;
 			}
 			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=null && getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))==paddle){
+			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))==paddle){
 				
 				vy=-vy;
 			}
