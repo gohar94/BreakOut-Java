@@ -61,7 +61,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private double vx=1;
-	private double vy=1;
+	private double vy=2;
 	
 	int turns=NTURNS;
 	
