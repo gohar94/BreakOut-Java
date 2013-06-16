@@ -249,8 +249,6 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		
 		board();
-		//System.out.println(startx);
-		//System.out.println(starty);
 		
 		add(paddle);
 		paddle.setFillColor(Color.BLACK);
