@@ -63,6 +63,8 @@ public class Breakout extends GraphicsProgram {
 	private double vx=1;
 	private double vy=1;
 	
+	int turns=NTURNS;
+	
 	int screenres_x=1440;
 	int screenres_y=750;
 	
@@ -270,8 +272,19 @@ public class Breakout extends GraphicsProgram {
 				vx=-vx;
 			}
 			
-			if(bally+BALL_RADIUS>700 || bally<100){
+			if(bally+BALL_RADIUS>700){
 				vy=-vy;
+			}
+			
+			if(bally<100){
+				if(turns>0){
+				turns=turns-1;
+				bally=400;
+				ballx=720;
+				}
+				else{
+					break;
+				}
 			}
 			
 			ballx+=vx;
