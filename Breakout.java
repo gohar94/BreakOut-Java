@@ -228,6 +228,9 @@ public class Breakout extends GraphicsProgram {
 				vy=-vy;
 			}
 			
+			if(ballx+(2*BALL_RADIUS)>mousex && ballx+(2*BALL_RADIUS)<(mousex+PADDLE_WIDTH) && bally+(2*BALL_RADIUS)==paddley){
+				vy=-vy;
+			}
 			
 			//System.out.println(getElementAt(ballx, bally));
 			
