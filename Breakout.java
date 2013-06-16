@@ -85,6 +85,7 @@ public class Breakout extends GraphicsProgram {
 	int starty= (screenres_y-APPLICATION_HEIGHT)/2+BRICK_Y_OFFSET;
 	int startxo= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 	int mousex=0;
+	int bricks_remaining = NBRICKS_PER_ROW*NBRICK_ROWS;
 	
 	public void mouseMoved(MouseEvent e){
 		if(e.getX()<860 && e.getX()>520){
@@ -281,6 +282,7 @@ public class Breakout extends GraphicsProgram {
 			if(bricks_remaining<=0){
 				done=true;
 			}
+			
 			ballx+=vx;
 			bally+=vy;
 			ball.setBounds(ballx, bally, 2*BALL_RADIUS, 2*BALL_RADIUS);
