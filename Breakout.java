@@ -241,16 +241,16 @@ public class Breakout extends GraphicsProgram {
 				}
 			}
 			
-			if(getElementAt(ballx+BALL_RADIUS, bally+(2*BALL_RADIUS))!=null){
-				GObject collision = getElementAt(ballx+BALL_RADIUS, bally+(2*BALL_RADIUS));
-				if(collision==paddle){
-					vy=-vy;
-				}
-				else{
-					remove(collision);
-					vy=-vy;
-				}
-			}
+//			if(getElementAt(ballx+BALL_RADIUS, bally+(2*BALL_RADIUS))!=null){
+//				GObject collision = getElementAt(ballx+BALL_RADIUS, bally+(2*BALL_RADIUS));
+//				if(collision==paddle){
+//					vy=-vy;
+//				}
+//				else{
+//					remove(collision);
+//					vy=-vy;
+//				}
+//			}
 		
 			//hitting the walls on right and left
 			
