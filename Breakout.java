@@ -200,7 +200,7 @@ public class Breakout extends GraphicsProgram {
 		System.out.println(starty);
 		GRect boundarywall = new GRect(startx, starty, 400, 600);
 		boundarywall.setColor(Color.BLACK);
-		boundarywall.isVisible(true);
+		
 		add(boundarywall);
 		
 		
