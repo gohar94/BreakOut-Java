@@ -169,7 +169,7 @@ public class Breakout extends GraphicsProgram {
 //		pause(1);
 //		
 	}
-	
+
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
@@ -208,24 +208,40 @@ public class Breakout extends GraphicsProgram {
 				}
 			}
 			
-			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null && getElementAt(ballx+(2*BALL_RADIUS), bally)!=paddle){
-				vy=-vy;
-				remove(getElementAt(ballx+(2*BALL_RADIUS), bally));
-				
+			if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null){
+				GObject collision = getElementAt(ballx+(2*BALL_RADIUS), bally);
+				if(collision==paddle){
+					vy=-vy;
+				}
+				else{
+					remove(collision);
+					vy=-vy;
+				}
 			}
 			
-			if(getElementAt(ballx, bally+(2*BALL_RADIUS))!=null && getElementAt(ballx, bally+(2*BALL_RADIUS))!=paddle){
-				vy=-vy;
-				remove(getElementAt(ballx, bally+(2*BALL_RADIUS)));
-				
+			if(getElementAt(ballx, bally+(2*BALL_RADIUS))!=null){
+				GObject collision = getElementAt(ballx, bally+(2*BALL_RADIUS));
+				if(collision==paddle){
+					vy=-vy;
+				}
+				else{
+					remove(collision);
+					vy=-vy;
+				}
 			}
 			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=null && getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=paddle){
-				vy=-vy;
-				remove(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS)));
-				
+			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=null){
+				GObject collision = getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS));
+				if(collision==paddle){
+					vy=-vy;
+				}
+				else{
+					remove(collision);
+					vy=-vy;
+				}
 			}
+			
+			
 		
 			//hitting the walls on right and left
 			
