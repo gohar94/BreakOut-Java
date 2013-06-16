@@ -228,25 +228,25 @@ public class Breakout extends GraphicsProgram {
 				vy=-vy;
 			}
 			
-			if(getElementAt(ballx, bally)==paddle){
-			
-				vy=-vy;
-			}
-			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally)==paddle){
-			
-				vy=-vy;
-			}
-			
-			if(getElementAt(ballx, bally+(2*BALL_RADIUS))==paddle){
-			
-				vy=-vy;
-			}
-			
-			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))==paddle){
-				
-				vy=-vy;
-			}
+//			if(getElementAt(ballx, bally)==paddle){
+//			
+//				vy=-vy;
+//			}
+//			
+//			if(getElementAt(ballx+(2*BALL_RADIUS), bally)==paddle){
+//			
+//				vy=-vy;
+//			}
+//			
+//			if(getElementAt(ballx, bally+(2*BALL_RADIUS))==paddle){
+//			
+//				vy=-vy;
+//			}
+//			
+//			if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))==paddle){
+//				
+//				vy=-vy;
+//			}
 			
 			//System.out.println(getElementAt(ballx, bally));
 			
