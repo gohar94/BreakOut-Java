@@ -208,7 +208,7 @@ public class Breakout extends GraphicsProgram {
 		boolean done=false;
 		
 
-		GOval ball = new GOval(ballx, bally, BALL_RADIUS, BALL_RADIUS);
+		GOval ball = new GOval(ballx, bally, 2*BALL_RADIUS, 2*BALL_RADIUS);
 		add(ball);
 		ball.setFillColor(Color.BLACK);
 		ball.setFilled(true);
@@ -289,7 +289,7 @@ public class Breakout extends GraphicsProgram {
 			
 			ballx+=vx;
 			bally+=vy;
-			ball.setBounds(ballx, bally, BALL_RADIUS,BALL_RADIUS);
+			ball.setBounds(ballx, bally, 2*BALL_RADIUS, 2*BALL_RADIUS);
 			pause(10);
 			
 		}
