@@ -84,10 +84,11 @@ public class Breakout extends GraphicsProgram {
 	int startx= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
 	int starty= (screenres_y-APPLICATION_HEIGHT)/2+BRICK_Y_OFFSET;
 	int startxo= ((screenres_x-APPLICATION_WIDTH)/2)-BRICK_WIDTH-BRICK_SEP;
+	int mousex=0;
 	
 	public void mouseMoved(MouseEvent e){
 		if(e.getX()<860 && e.getX()>520){
-			int mousex=e.getX();
+			mousex=e.getX();
 			
 			paddle.setBounds(mousex, paddley, PADDLE_WIDTH, PADDLE_HEIGHT);
 			add(paddle);
@@ -222,6 +223,8 @@ public class Breakout extends GraphicsProgram {
 			}
 			
 			//--
+			
+			if(ballx>e.getX && ballx<(mousex+PADDLE_WIDTH) && bally==paddley);
 			
 			if(getElementAt(ballx, bally)==paddle){
 			
