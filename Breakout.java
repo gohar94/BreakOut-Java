@@ -65,13 +65,16 @@ public class Breakout extends GraphicsProgram {
 	
 	int turns=NTURNS;
 	
+	//screen settings
 	int screenres_x=1440;
 	int screenres_y=750;
 	
+	// paddle
 	int paddlex=((screenres_x-APPLICATION_WIDTH)/2)+(APPLICATION_WIDTH/2);
 	int paddley= (((screenres_y-APPLICATION_HEIGHT)/2)+APPLICATION_HEIGHT-PADDLE_Y_OFFSET+PADDLE_HEIGHT);
 	GRect paddle = new GRect(paddlex, paddley, PADDLE_WIDTH, PADDLE_HEIGHT);
 	
+	//--
 	int lowerbound= (screenres_x - APPLICATION_WIDTH)/2;
 	int upperbound= lowerbound + APPLICATION_WIDTH - PADDLE_WIDTH;
 	
@@ -98,12 +101,6 @@ public class Breakout extends GraphicsProgram {
 	}	
 	
 	public void board(){
-		//board
-		// ---
-		
-		
-		
-
 		
 		for(int n=0; n<NBRICK_ROWS; n++){
 			
@@ -153,8 +150,6 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
-	
-	
 	public void ball(){
 		
 //		
@@ -171,38 +166,13 @@ public class Breakout extends GraphicsProgram {
 //		
 	}
 	
-//	public GObject getCollidingObject(){
-//
-//		if(getElementAt(ballx, bally)!=null){
-//			return(getElementAt(ballx, bally));	
-//		}
-//		
-//		if(getElementAt(ballx+(2*BALL_RADIUS), bally)!=null){
-//			remove(getElementAt(ballx+(2*BALL_RADIUS), bally));
-//			vy=-vy;
-//		}
-//		
-//		if(getElementAt(ballx, bally+(2*BALL_RADIUS))!=null){
-//			remove(getElementAt(ballx, bally+(2*BALL_RADIUS)));
-//			vy=-vy;
-//		}
-//		
-//		if(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS))!=null){
-//			remove(getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS)));
-//			vy=-vy;
-//		}
-//	}
-	
-//	private GObject getCollidingObject(){
-//		getElementAt(ballx, bally);
-//	}
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
 		
 		board();
-		System.out.println(startx);
-		System.out.println(starty);
+		//System.out.println(startx);
+		//System.out.println(starty);
 		
 		add(paddle);
 		paddle.setFillColor(Color.BLACK);
