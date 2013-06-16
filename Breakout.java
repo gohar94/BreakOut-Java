@@ -87,6 +87,8 @@ public class Breakout extends GraphicsProgram {
 	int mousex=0;
 	int bricks_remaining = NBRICKS_PER_ROW*NBRICK_ROWS;
 	
+	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
+	
 	public void mouseMoved(MouseEvent e){
 		if(e.getX()<860 && e.getX()>520){
 			mousex=e.getX();
@@ -187,11 +189,13 @@ public class Breakout extends GraphicsProgram {
 			GObject collision = getElementAt(ballx, bally);
 			if(collision==paddle){
 				vy=-vy;
+				bounceClip.play();
 			}
 			else{
 				remove(collision);
 				bricks_remaining=bricks_remaining-1;
 				vy=-vy;
+				bounceClip.play();
 			}
 		}
 		
@@ -199,11 +203,13 @@ public class Breakout extends GraphicsProgram {
 			GObject collision = getElementAt(ballx+(2*BALL_RADIUS), bally);
 			if(collision==paddle){
 				vy=-vy;
+				bounceClip.play();
 			}
 			else{
 				remove(collision);
 				bricks_remaining=bricks_remaining-1;
 				vy=-vy;
+				bounceClip.play();
 			}
 		}
 		
@@ -211,11 +217,13 @@ public class Breakout extends GraphicsProgram {
 			GObject collision = getElementAt(ballx, bally+(2*BALL_RADIUS));
 			if(collision==paddle){
 				vy=-vy;
+				bounceClip.play();
 			}
 			else{
 				remove(collision);
 				bricks_remaining=bricks_remaining-1;
 				vy=-vy;
+				bounceClip.play();
 			}
 		}
 		
@@ -223,11 +231,13 @@ public class Breakout extends GraphicsProgram {
 			GObject collision = getElementAt(ballx+(2*BALL_RADIUS), bally+(2*BALL_RADIUS));
 			if(collision==paddle){
 				vy=-vy;
+				bounceClip.play();
 			}
 			else{
 				remove(collision);
 				bricks_remaining=bricks_remaining-1;
 				vy=-vy;
+				bounceClip.play();
 			}
 		}
 		
@@ -235,11 +245,13 @@ public class Breakout extends GraphicsProgram {
 			GObject collision = getElementAt(ballx+BALL_RADIUS+1, bally+(2*BALL_RADIUS)+1);
 			if(collision==paddle){
 				vy=-vy;
+				bounceClip.play();
 			}
 			else{
 				remove(collision);
 				bricks_remaining=bricks_remaining-1;
 				vy=-vy;
+				bounceClip.play();
 			}
 		}
 		
@@ -247,11 +259,13 @@ public class Breakout extends GraphicsProgram {
 			GObject collision = getElementAt(ballx+BALL_RADIUS+1, bally-1);
 			if(collision==paddle){
 				vy=-vy;
+				bounceClip.play();
 			}
 			else{
 				remove(collision);
 				bricks_remaining=bricks_remaining-1;
 				vy=-vy;
+				bounceClip.play();
 			}
 		}
 	}
@@ -286,10 +300,12 @@ public class Breakout extends GraphicsProgram {
 			
 			if(ballx+(2*BALL_RADIUS)>=(((screenres_x-APPLICATION_WIDTH)/2)+APPLICATION_WIDTH) || ballx<=((screenres_x-APPLICATION_WIDTH)/2)){
 				vx=-vx;
+				bounceClip.play();
 			}
 			
 			if(bally+(2*BALL_RADIUS)<100){
 				vy=-vy;
+				bounceClip.play();
 			}
 			
 			if(bally>700){
