@@ -112,6 +112,9 @@ public class Breakout extends GraphicsProgram {
 		add(nn2);
 		GLine nn3 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,starty-2,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,starty-3+APPLICATION_HEIGHT);
 		add(nn3);
+		GLine nn4 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,starty-2,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,starty-3+APPLICATION_HEIGHT);
+		add(nn4);
+		
 		
 		
 		for(int n=0; n<NBRICK_ROWS; n++){
