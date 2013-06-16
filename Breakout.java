@@ -284,7 +284,7 @@ public class Breakout extends GraphicsProgram {
 			}
 			
 			if(bally>700){
-				if(turns>=0){
+				if(turns>0){
 				turns=turns-1;
 				bally=400;
 				ballx=720;
