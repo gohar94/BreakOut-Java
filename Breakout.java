@@ -106,7 +106,7 @@ public class Breakout extends GraphicsProgram {
 	
 	public void board(){
 		
-		GRect nn = new GRect(startx+(BRICK_WIDTH)+(BRICK_SEP),starty,APPLICATION_WIDTH+2,APPLICATION_HEIGHT+2);
+		GRect nn = new GRect(startx+(BRICK_WIDTH)-10+(BRICK_SEP),starty-10,APPLICATION_WIDTH+50,APPLICATION_HEIGHT+50);
 		add(nn);
 		
 		
