@@ -269,6 +269,8 @@ public class Breakout extends GraphicsProgram {
 			}
 		}
 	}
+	
+	print(turns);
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
@@ -311,6 +313,7 @@ public class Breakout extends GraphicsProgram {
 			if(bally>700){
 				if(turns>0){
 				turns=turns-1;
+				print(turns);
 				bally=400;
 				ballx=720;
 				}
@@ -327,8 +330,6 @@ public class Breakout extends GraphicsProgram {
 			bally+=vy;
 			ball.setBounds(ballx, bally, 2*BALL_RADIUS, 2*BALL_RADIUS);
 			pause(8);
-			
-			print(turns);
 			
 		}
 		
