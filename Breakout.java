@@ -232,6 +232,8 @@ public class Breakout extends GraphicsProgram {
 				vy=-vy;
 			}
 			
+			
+			
 			//System.out.println(getElementAt(ballx, bally));
 			
 			if(ballx+(2*BALL_RADIUS)>=(((screenres_x-APPLICATION_WIDTH)/2)+APPLICATION_WIDTH) || ballx<=((screenres_x-APPLICATION_WIDTH)/2)){
