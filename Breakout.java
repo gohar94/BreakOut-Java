@@ -67,7 +67,7 @@ public class Breakout extends GraphicsProgram {
 	int screenres_y=750;
 	
 	int paddlex=((screenres_x-APPLICATION_WIDTH)/2)+(APPLICATION_WIDTH/2);
-	int paddley= (((screenres_y-APPLICATION_HEIGHT)/2)+APPLICATION_HEIGHT-PADDLE_HEIGHT);
+	int paddley= (((screenres_y-APPLICATION_HEIGHT)/2)+APPLICATION_HEIGHT-PADDLE_HEIGHT-PADDLE_Y_OFFSET);
 	GRect paddle = new GRect(paddlex, paddley, PADDLE_WIDTH, PADDLE_HEIGHT);
 	
 	int lowerbound= (screenres_x - APPLICATION_WIDTH)/2;
@@ -78,15 +78,15 @@ public class Breakout extends GraphicsProgram {
 	
 	public void mouseMoved(MouseEvent e){
 		if(e.getX()<860 && e.getX()>520){
-			paddle.setBounds(e.getX(), APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+			paddle.setBounds(e.getX(), paddley, PADDLE_WIDTH, PADDLE_HEIGHT);
 			add(paddle);
 		}
 		if(e.getX()>860){
-			paddle.setBounds(860, APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+			paddle.setBounds(860, paddley, PADDLE_WIDTH, PADDLE_HEIGHT);
 			add(paddle);
 		}
 		if(e.getX()<520){
-			paddle.setBounds(520, APPLICATION_HEIGHT -PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+			paddle.setBounds(520, paddley, PADDLE_WIDTH, PADDLE_HEIGHT);
 			add(paddle);
 		}
 	}	
