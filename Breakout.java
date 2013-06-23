@@ -109,10 +109,10 @@ public class Breakout extends GraphicsProgram {
 	
 	public void board(){
 		
-		//GLine nn1 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-3,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,startywall-3);
-		//add(nn1);
-		GLine nn2 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-3,startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-1+APPLICATION_HEIGHT);
-		add(nn2);
+		GLine nn1 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-3,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,startywall-3);
+		add(nn1);
+		//GLine nn2 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-3,startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-1+APPLICATION_HEIGHT);
+		//add(nn2);
 		GLine nn3 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,startywall-2,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,startywall-3+APPLICATION_HEIGHT);
 		add(nn3);
 		GLine nn4 = new GLine(startx+(BRICK_WIDTH)+(BRICK_SEP)-3,startywall-1+APPLICATION_HEIGHT,startx+(BRICK_WIDTH)+(BRICK_SEP)+3+APPLICATION_WIDTH,startywall-1+APPLICATION_HEIGHT);
